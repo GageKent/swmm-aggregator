@@ -1,0 +1,21 @@
+:root {
+  /* TODO */
+}
+
+body {
+  margin: 0px;
+}
+
+#app-container {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+}
+
+#main-map {
+  height: 100vh;
+}
+
+#sidebar-container {
+  height: 100%;
+  width: 100%;
+}

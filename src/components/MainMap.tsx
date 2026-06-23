@@ -1,5 +1,5 @@
-import { MapContainer } from "react-leaflet";
-import { TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, } from "react-leaflet";
+// import { EditControl } from "react-leaflet-draw";
 
 export default function MainMap() {
 
@@ -14,6 +14,15 @@ export default function MainMap() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      {/* <FeatureGroup>
+        <EditControl
+          position='topright'
+          onEdited={(v) => v._onEditPath}
+          onCreated={(v) => v._onCreate}
+          onDeleted={(v) => v._onDeleted}
+          draw={{rectangle: true}}
+        />
+      </FeatureGroup> */}
     </MapContainer>
     )
 }
