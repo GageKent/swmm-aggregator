@@ -18,6 +18,9 @@ export default function MapRect({bounds}: MapRectProps) {
     const rect = new L.Rectangle(rectBounds);
     const container = context.layerContainer || context.map;
     container.addLayer(rect);
+    // zoom
+    const map = context.map;
+    map.fitBounds(rectBounds, {padding: [70, 70]})
 
     return () => {
       container.removeLayer(rect);
