@@ -8,14 +8,26 @@ body {
 
 #app-container {
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 15rem 5remfr;
+  
 }
 
 #main-map {
-  height: 100vh;
+  height: 60vh;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 #sidebar-container {
   height: 100%;
   width: 100%;
+}
+
+#sidebar-container h2 {
+  padding-left: 1em
+}
+
+
+#corners-form {
+  padding-left: 1em;
 }
