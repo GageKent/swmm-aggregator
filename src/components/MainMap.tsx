@@ -1,28 +1,20 @@
-import { MapContainer, TileLayer, } from "react-leaflet";
-// import { EditControl } from "react-leaflet-draw";
+import { MapContainer, TileLayer} from "react-leaflet";
+import MapRect from "./MapRect";
+import type { AppProps } from "../types";
 
-export default function MainMap() {
+export default function MainMap({ bounds }: AppProps) {
 
   return (
     <MapContainer 
       id="main-map"
-      center={[51.505, -0.09]} 
-      zoom={13} scrollWheelZoom={false}
-      style={{ height: "100vh"}}
+      center={[38.8419, -96.0249]} 
+      zoom={5} scrollWheelZoom={false}
     >
       <TileLayer 
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {/* <FeatureGroup>
-        <EditControl
-          position='topright'
-          onEdited={(v) => v._onEditPath}
-          onCreated={(v) => v._onCreate}
-          onDeleted={(v) => v._onDeleted}
-          draw={{rectangle: true}}
-        />
-      </FeatureGroup> */}
+      {bounds ? ( <MapRect bounds={bounds}/> ) : null }
     </MapContainer>
     )
 }
